@@ -1,2 +1,0 @@
-const largeNumber = 10;
-
