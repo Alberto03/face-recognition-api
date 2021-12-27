@@ -11,7 +11,7 @@ const profile = require('./controllers/profile');
 const db = knex({
     client: 'pg',
     connection: {
-      host : process.env.DATABASE_URL, //'postgresql-pointy-54470',
+      connectionString : process.env.DATABASE_URL, //'postgresql-pointy-54470',
       ssl: {
         rejectUnauthorized: false
       }
