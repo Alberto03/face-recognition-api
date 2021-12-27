@@ -11,11 +11,14 @@ const profile = require('./controllers/profile');
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-pointy-54470',
-      port : 5432,
+      host : process.env.DATABASE_URL, //'postgresql-pointy-54470',
+      ssl: {
+        rejectUnauthorized: false
+      }
+      /*port : 5432,
       user : 'postgres',
       password : 'test',
-      database : 'smart-brain'
+      database : 'smart-brain'*/
     }
   });
 
