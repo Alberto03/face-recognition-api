@@ -28,7 +28,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send(/*database.users*/ 'cip');
+    res.send('connected');
 })
 
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt)});
